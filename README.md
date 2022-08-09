@@ -58,7 +58,7 @@ id | username | password
 (0 rows)
 ```
 
-In this example, I will create two users, **Damian** and **Janessa** and give them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```SELECT * FROM user;``` command again and validate the new entries.
+In this example, I will create two users, **Damian** and **Janessa** and assign them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```SELECT * FROM user;``` command again and validate the new entries.
 
 ```shell
 id | username |                                                          password                                                          
@@ -67,3 +67,4 @@ id | username |                                                          passwor
   2 | Janessa  | \x243262243132244131556d2e6a4e68443866754b7a5a30764e7556762e3050683953433656735173694d74336a54516777755a7665486e4539657a53
 (2 rows)
 ```
+We can now confirm that our app works, with the usernames and corresponding hashed passwords that were created using the BCrypt module (you should never see the passwords stored in plain text).

@@ -5,7 +5,7 @@ This repo contains a list of the components for the exam for the Backend Softwar
 
 # flask-app
 
-This application creates a basic user registration and authentication application using Flask as a framework. User and corresponding passwords are saved on a PostgreSQL database, with the schema outlined below.
+This application creates a basic user registration and authentication application using **Flask** as a framework. **wtforms** is used specifically for the validation of username and password fields, and **bcrypt** for password hashing (which avoids storing passwords in plain text). User and corresponding passwords are saved on a PostgreSQL database, with the schema outlined below.
 
 
 ## Getting started
@@ -49,7 +49,7 @@ First visit [http://localhost:4000](http://localhost:4000) and click on *Registe
 
 # Example
 
-Currently we have no reistered users in the database, and thus when we make a SQL query to the DB as outlined below we'll get no results. 
+Currently we have no registered users in the database, and thus when we make a SQL query to the DB as outlined below we'll get no results. 
 
 ```shell
 users=# SELECT * FROM user;

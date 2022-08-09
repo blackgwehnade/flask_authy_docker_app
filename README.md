@@ -68,3 +68,10 @@ id | username |                                                          passwor
 (2 rows)
 ```
 We can now confirm that our app works, with the usernames and corresponding hashed passwords that were created using the BCrypt module (you should never see the passwords stored in plain text).
+
+# Logging in and out
+
+Finally, let's visit the [http://localhost:4000/login](http://localhost:4000/login) endpoint and login in with any valid username/password credential. Once we've done so, we should be redirected to [http://localhost:4000/dashboard](http://localhost:4000/dashboard). Click on the **Click here to logout.** button to return back to the homage page.
+
+# Recap
+

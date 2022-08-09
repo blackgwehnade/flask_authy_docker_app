@@ -31,7 +31,7 @@ python app/app.py
 
 Visit [http://localhost:4000](http://localhost:4000)
 
-(Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in 'app.py', 'DOCKERFILE' and 'docker-compose.yaml'.
+(Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in *app.py*, *DOCKERFILE* and *docker-compose.yaml*.
 
 ## Development
 

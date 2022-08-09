@@ -27,9 +27,7 @@ pip install -r requirements.txt
 python app/app.py
 ```
 
-Visit [http://localhost:4000](http://localhost:4000)
-
-(Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in *app.py*, *DOCKERFILE* and *docker-compose.yaml*.
+The Flask app and PostgreSQL database should now be up and running
 
 
 # PostgreSQL
@@ -41,3 +39,10 @@ psql -h localhost -p 5436 -U postgres -d users
 ```
 
 Provide the password: *default_pw* when prompted.
+
+# Using the app
+
+Now you should be able to start registering and logging in users.
+First visit [http://localhost:4000](http://localhost:4000) and click on *Register Page*. Then enter in a new username of at least 8 alphanumeric characters and then a password of 8-20 characters.
+
+(Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in *app.py*, *DOCKERFILE* and *docker-compose.yaml*.

@@ -58,7 +58,7 @@ id | username | password
 (0 rows)
 ```
 
-In this example, I will create two users, **Damian** and **Janessa** and assign them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```SELECT * FROM user;``` command again and validate the new entries.
+In this example, I will create two users, **Damian** and **Janessa** and assign them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```SELECT * FROM public.user;``` command again and validate the new entries.
 
 ```shell
 id | username |                                                          password                                                          

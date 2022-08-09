@@ -1,12 +1,10 @@
 # Overview
 
-This repo contains a list of the components for the exam for the Backend Software Engineer position at Array, as outlined [here](https://gitlab.com/array.com/tests-backend).
+This repo contains a list of the components for the exam for the Backend Software Engineer position at Array, as outlined [here](https://gitlab.com/array.com/tests-backend). This guide has been written for users using Ubuntu 20.04 LTS.
 
 # flask-app
 
-Flask application 
-
-The example flask app connects to a [redis](http://redis.io/) instance and displays a simple visit counter and the hostname of the docker container serving the app.
+This application creates a basic user registration and authentication application using Flask as a framework.
 
 ## Getting started
 

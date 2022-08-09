@@ -5,7 +5,7 @@ This repo contains a list of the components for the exam for the Backend Softwar
 
 # Design
 
-This application creates a basic user registration and authentication application using **Flask** as a framework. **wtforms** is used specifically for the validation of username and password fields, and **bcrypt** for password hashing (which avoids storing passwords in plain text). I also decided to use **SQLAlchemy** as an ORM for interaction between the Python classes and **PostgreSQL** data tables, automatically converting function calls within the Flask app to SQL statements to the database.
+This application creates a basic user registration and authentication application using **Flask** as a framework. **WTForms** is used specifically for the validation of username and password fields, and **Bcrypt** for password hashing (which avoids storing passwords in plain text). I also decided to use **SQLAlchemy** as an ORM for interaction between the Python classes and **PostgreSQL** data tables, automatically converting function calls within the Flask app to SQL statements to the database.
 
 
 ## Getting started

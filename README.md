@@ -46,3 +46,10 @@ Now you should be able to start registering and logging in users.
 First visit [http://localhost:4000](http://localhost:4000) and click on *Register Page*. Then enter in a new username of at least 8 alphanumeric characters and then a password of 8-20 characters.
 
 (Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in *app.py*, *DOCKERFILE* and *docker-compose.yaml*.
+
+```shell
+users=# SELECT * FROM user;
+id | username | password 
+----+----------+----------
+(0 rows)
+```

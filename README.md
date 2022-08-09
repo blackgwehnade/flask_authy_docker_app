@@ -35,6 +35,9 @@ Visit [http://localhost:4000](http://localhost:4000)
 # PostgreSQL
 
 After you have started the Flask app using Docker Compose, you will need to make sure that the PostgreSQL database is working properly. Run the following command in a separate (split) terminal.
+
 ```shell
 psql -h localhost -p 5436 -U postgres -d users
 ```
+
+Provide the password: *default_pw* when prompted.

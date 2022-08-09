@@ -1,6 +1,10 @@
+# Overview
+
+This repo contains a list of the components for the exam for the Backend Software Engineer position at Array, as outlined [here](https://gitlab.com/array.com/tests-backend).
+
 # flask-app
 
-Example app for demonstrating continuos integration/continuos deployment (CI/CD) workflows -- inspired by [dockercloud-quickstart-python](https://github.com/docker/dockercloud-quickstart-python).
+Flask application 
 
 The example flask app connects to a [redis](http://redis.io/) instance and displays a simple visit counter and the hostname of the docker container serving the app.
 

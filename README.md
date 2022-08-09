@@ -4,15 +4,22 @@ This repo contains a list of the components for the exam for the Backend Softwar
 
 # flask-app
 
-This application creates a basic user registration and authentication application using Flask as a framework.
+This application creates a basic user registration and authentication application using Flask as a framework. User and corresponding passwords are saved on a PostgreSQL database, with the schema outlined below.
+
+# PostgreSQL
+
+
 
 ## Getting started
 
-Install [docker](https://docs.docker.com/engine/installation/) and run:
+Make sure that you have a GitHub account with valid SSH keys. Also make sure you have Docker installed [docker](https://docs.docker.com/engine/installation/) and run the following:
 
 ```shell
+git clone git@github.com:blackgwehnade/flask_authy_docker_app.
+
+cd (__yourpath__)/flask_authy_docker_app
+
 docker-compose up
-# docker-compose stop
 ```
 
 Otherwise, for the standalone web service:

@@ -15,7 +15,7 @@ Make sure that you have a GitHub account with valid SSH keys. Also make sure you
 ```shell
 git clone git@github.com:blackgwehnade/flask_authy_docker_app.
 
-cd (__yourpath__)/flask_authy_docker_app
+cd <__wheredidyouclonetherepo__>/flask_authy_docker_app
 
 docker-compose up
 ```

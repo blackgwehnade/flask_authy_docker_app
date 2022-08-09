@@ -47,9 +47,15 @@ First visit [http://localhost:4000](http://localhost:4000) and click on *Registe
 
 (Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in *app.py*, *DOCKERFILE* and *docker-compose.yaml*.
 
+# Example
+
+Currently we have no reistered users in the database, and thus when we make a SQL query to the DB as outlined below we'll get no results. 
+
 ```shell
 users=# SELECT * FROM user;
 id | username | password 
 ----+----------+----------
 (0 rows)
 ```
+
+In this example, I will create two users, **Damian** and **Janessa** and give them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```shell SELECT * FROM user;``` command again and validate the new entries.

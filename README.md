@@ -3,9 +3,9 @@
 This repo contains a list of the components for the exam for the Backend Software Engineer position at Array, as outlined [here](https://gitlab.com/array.com/tests-backend). This guide has been written for users using Ubuntu 20.04 LTS.
 
 
-# flask-app
+# Design
 
-This application creates a basic user registration and authentication application using **Flask** as a framework. **wtforms** is used specifically for the validation of username and password fields, and **bcrypt** for password hashing (which avoids storing passwords in plain text). User and corresponding passwords are saved on a PostgreSQL database, with the schema outlined below.
+This application creates a basic user registration and authentication application using **Flask** as a framework. **wtforms** is used specifically for the validation of username and password fields, and **bcrypt** for password hashing (which avoids storing passwords in plain text). I also decided to use **SQLAlchemy** as an ORM for interaction between the Python classes and **PostgreSQL** data tables, automatically converting function calls within the Flask app to SQL statements to the database.
 
 
 ## Getting started
@@ -30,7 +30,7 @@ python app/app.py
 The Flask app and PostgreSQL database should now be up and running
 
 
-# PostgreSQL
+# PostgreSQL steps
 
 After you have started the Flask app using Docker Compose, you will need to make sure that the PostgreSQL database is working properly. Run the following command in a separate (split) terminal.
 

@@ -10,7 +10,7 @@ This application creates a basic user registration and authentication applicatio
 
 ## Getting started
 
-Make sure that you have a GitHub account with valid SSH keys. Also make sure you have Docker installed [docker](https://docs.docker.com/engine/installation/) and run the following in a terminal:
+Make sure that you have a GitHub account with valid SSH keys. Also make sure you have Docker and PostgreSQL installed [Docker](https://docs.docker.com/engine/installation/) [PostgreSQL](https://www.postgresql.org/download/) and run the following in a terminal:
 
 ```shell
 git clone git@github.com:blackgwehnade/flask_authy_docker_app.

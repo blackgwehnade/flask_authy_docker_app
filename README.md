@@ -58,4 +58,12 @@ id | username | password
 (0 rows)
 ```
 
-In this example, I will create two users, **Damian** and **Janessa** and give them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```shell SELECT * FROM user;``` command again and validate the new entries.
+In this example, I will create two users, **Damian** and **Janessa** and give them the passwords *DamianPW* and *JanessaPW* respectively. Then let's run the ```SELECT * FROM user;``` command again and validate the new entries.
+
+```shell
+id | username |                                                          password                                                          
+----+----------+----------------------------------------------------------------------------------------------------------------------------
+  1 | Damian   | \x243262243132246f42612f644d3342734c486d7847494878724e6751655a63706c72767766714f586f62483254766258516a2f3035454a6657334671
+  2 | Janessa  | \x243262243132244131556d2e6a4e68443866754b7a5a30764e7556762e3050683953433656735173694d74336a54516777755a7665486e4539657a53
+(2 rows)
+```

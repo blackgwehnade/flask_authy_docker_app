@@ -2,18 +2,18 @@
 from flask import Flask, render_template, url_for, redirect
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
-from flask import jsonify
 from flask_wtf import FlaskForm
-from flask_wtf.csrf import CSRFProtect, CSRFError
+#from flask_wtf.csrf import CSRFProtect, CSRFError
 from flask_bcrypt import Bcrypt
-from wtforms import StringField, PasswordField, SubmitField
+from wtforms import StringField, EmailField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, ValidationError
-
 
 # launch Flask App
 app = Flask(__name__)
 # configure PostgreSQL db and secret key
 WTF_CSRF_CHECK_DEFAULT = False
+# On our PostgreSQL server, 'default_pw' will be the password we use to access the CLI after typing the command below:
+# psql -h localhost -p 5436 -U postgres -d users
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:default_pw@users_db:5432/users'
 app.config['SECRET_KEY'] = 'mysecretkey'
 app.config['WTF_CSRF_ENABLED'] = False
@@ -46,6 +46,7 @@ class RegisterForm(FlaskForm):
 
     submit = SubmitField("Register")
 
+# this function checks if the username already exists in the database of registered users
     def validate_username(self, username):
         existing_user_username = User.query.filter_by(
             username=username.data).first()

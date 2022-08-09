@@ -71,7 +71,4 @@ We can now confirm that our app works, with the usernames and corresponding hash
 
 # Logging in and out
 
-Finally, let's visit the [http://localhost:4000/login](http://localhost:4000/login) endpoint and login in with any valid username/password credential. Once we've done so, we should be redirected to [http://localhost:4000/dashboard](http://localhost:4000/dashboard). Click on the **Click here to logout.** button to return back to the homage page.
-
-# Recap
-
+Finally, let's visit the [http://localhost:4000/login](http://localhost:4000/login) endpoint and login in with any valid username/password credential. Once we've done so, we should be redirected to [http://localhost:4000/dashboard](http://localhost:4000/dashboard). Click on the **Click here to logout.** button to return back to the homage page. You should no longer be able to visit the dashboard endpoint since you are logged out.

@@ -12,17 +12,16 @@ from wtforms.validators import InputRequired, Length, ValidationError
 
 # launch Flask App
 app = Flask(__name__)
-# configure PostgreSQLdb and secret key
+# configure PostgreSQL db and secret key
 WTF_CSRF_CHECK_DEFAULT = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:default_pw@users_db:5432/users'
 app.config['SECRET_KEY'] = 'mysecretkey'
 app.config['WTF_CSRF_ENABLED'] = False
 app.config['SESSION_COOKIE_SECURE'] = False
-#csrf = CSRFProtect(app)
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-
+# import LoginManager
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "login"
@@ -31,12 +30,13 @@ login_manager.login_view = "login"
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-# create table for DB with attributes
+# create user class
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), nullable=False, unique=True)
     password = db.Column(db.LargeBinary(), nullable=False, unique=False)
 
+# create registration form class
 class RegisterForm(FlaskForm):
     username = StringField(label=('Enter your username: '), validators=[InputRequired(), Length(
         min=4, max=20)], render_kw={"placeholder": "Username"})
@@ -53,6 +53,7 @@ class RegisterForm(FlaskForm):
             raise ValidationError(
                 "That username is already taken, please choose another one.")
 
+# create login form class
 class LoginForm(FlaskForm):
     username = StringField(validators=[InputRequired(), Length(
         min=4, max=20)], render_kw={"placeholder": "Username"})
@@ -81,15 +82,18 @@ def login():
                 return redirect(url_for('dashboard'))
     return render_template('login.html', form=form)
 
+# create dashboard route to confirm successful user login
 @app.route('/dashboard', methods = ['GET', 'POST'])
 @login_required
 def dashboard():
     return render_template('dashboard.html')
 
+# create route for new user registration
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     form = RegisterForm()
 
+    # this function will validate the creation of the new user
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data)
         new_user = User(username=form.username.data, password = hashed_password)
@@ -99,13 +103,14 @@ def register():
 
     return render_template('register.html', form=form)
 
+# this endpoint will log the user out and redirect to the login page
 @app.route('/logout', methods = ['GET', 'POST'])
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('login'))
 
-
+# initialize the app and PostgreSQL db
 if __name__ == '__main__':
     db.create_all()
     print(db.engine.url)

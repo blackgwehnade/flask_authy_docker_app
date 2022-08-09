@@ -1,6 +1,6 @@
 # Overview
 
-This repo contains a list of the components for the exam for the Backend Software Engineer position at Array, as outlined [here](https://gitlab.com/array.com/tests-backend). This guide has been written for users using Ubuntu 20.04 LTS.
+This guide has been written and tested using Ubuntu 20.04 LTS.
 
 
 # Design

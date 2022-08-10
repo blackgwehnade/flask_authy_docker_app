@@ -77,6 +77,8 @@ We can now confirm that our app works, with the usernames and corresponding hash
 Finally, let's visit the [http://localhost:4000/login](http://localhost:4000/login) endpoint and login in with any valid username/password credential. Once we've done so, we should be redirected to [http://localhost:4000/dashboard](http://localhost:4000/dashboard). Click on the **Click here to logout.** button to return back to the homage page. You should no longer be able to visit the dashboard endpoint since you are logged out.
 
 
-# API Validation
+# API Validation & Postman Collection
 
 Unfortunately, I have not gotten the output desired for this portion of the project. I will cover the major difficulties I encountered on this project in a separate (unlisted) YouTube video.
+
+Here is a link to the Postman collection I created in my attempt to validate the Flask API endpoints: [https://www.getpostman.com/collections/36f839ea5627fc652d4e](https://www.getpostman.com/collections/36f839ea5627fc652d4e)

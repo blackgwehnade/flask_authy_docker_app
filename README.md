@@ -40,12 +40,14 @@ psql -h localhost -p 5436 -U postgres -d users
 
 Provide the password: *default_pw* when prompted.
 
+
 # Using the app
 
 Now you should be able to start registering and logging in users.
 First visit [http://localhost:4000](http://localhost:4000) and click on *Register Page*. Then enter in a new username of at least 8 alphanumeric characters and then a password of 8-20 characters.
 
 (Note: if you already have a local process running on Port 4000, you will either have to halt it or change the port number in *app.py*, *DOCKERFILE* and *docker-compose.yaml*.
+
 
 # Example
 
@@ -69,6 +71,12 @@ id | username |                                                          passwor
 ```
 We can now confirm that our app works, with the usernames and corresponding hashed passwords that were created using the BCrypt module (you should never see the passwords stored in plain text).
 
+
 # Logging in and out
 
 Finally, let's visit the [http://localhost:4000/login](http://localhost:4000/login) endpoint and login in with any valid username/password credential. Once we've done so, we should be redirected to [http://localhost:4000/dashboard](http://localhost:4000/dashboard). Click on the **Click here to logout.** button to return back to the homage page. You should no longer be able to visit the dashboard endpoint since you are logged out.
+
+
+# API Validation
+
+Unfortunately, I have not gotten the output desired for this portion of the project. I will cover the major difficulties I encountered on this project in a separate (unlisted) YouTube video.
